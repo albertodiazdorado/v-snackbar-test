@@ -1,29 +1,17 @@
-# snackbar
+# snackbar-bug
 
-## Project setup
-```
-yarn install
-```
+Steps to reproduce the bug
 
-### Compiles and hot-reloads for development
+### With vuetify 2.2.x
 ```
 yarn serve
 ```
+Go to `http://localhost:8080`, click the bell, observe that the snackbar appears and disappears
 
-### Compiles and minifies for production
+### With vuetify 2.3.0
 ```
-yarn build
+yarn add vuetify@~2.3.0
+yarn serve
 ```
+Go to `http://localhost:8080`, click the bell, observe that nothing happens
 
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
