@@ -16,10 +16,6 @@ export default class Snackbar extends Vue {
 
 <style lang="scss">
 @import "src/styles/styles";
-.v-snack {
-  position: static !important;
-  padding: 5px;
-}
 
 .v-snack__wrapper {
   min-width: 25em !important;

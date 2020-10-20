@@ -3,6 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png" />
     <v-icon @click="show = !show" class="close"> mdi-bell </v-icon>
     <Snackbar text="Welcome to Your Vue.js + TypeScript App" :snackbar="show" />
+    <h3>Some headline</h3>
   </div>
 </template>
 
