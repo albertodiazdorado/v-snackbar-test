@@ -1,5 +1,5 @@
 <template>
-  <v-snackbar :value="snackbar" :timeout="0">
+  <v-snackbar :value="snackbar" :timeout="10000">
     <div>{{ text }}</div>
   </v-snackbar>
 </template>
