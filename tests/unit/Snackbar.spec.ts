@@ -19,7 +19,7 @@ describe("Snackbar.vue", () => {
     const wrapper = mount(Snackbar, {
       localVue,
       vuetify,
-      propsData: { text }
+      propsData: { text, snackbar: true }
     });
     expect(wrapper.text()).toMatch(text);
   });
