@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <Snackbar text="Welcome to Your Vue.js + TypeScript App" />
+    <v-icon @click="show = !show" class="close"> mdi-bell </v-icon>
+    <Snackbar text="Welcome to Your Vue.js + TypeScript App" :snackbar="show" />
   </div>
 </template>
 
@@ -11,10 +12,12 @@ import Snackbar from "./components/Snackbar.vue";
 
 @Component({
   components: {
-    Snackbar
-  }
+    Snackbar,
+  },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  private show = false;
+}
 </script>
 
 <style>

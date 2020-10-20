@@ -1,14 +1,6 @@
 <template>
-  <v-snackbar
-    :value="snackbar"
-    :timeout="0"
-    color="red"
-    content-class="v-snack-content"
-  >
+  <v-snackbar :value="snackbar" :timeout="0">
     <div>{{ text }}</div>
-    <v-icon @click="snackbar = false" class="close">
-      mdi-close
-    </v-icon>
   </v-snackbar>
 </template>
 
@@ -18,13 +10,13 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 @Component
 export default class Snackbar extends Vue {
   @Prop() private text!: string;
-  private snackbar = true;
+  @Prop() private snackbar!: boolean;
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "src/styles/styles";
 .v-snack {
-  height: auto !important;
   position: static !important;
   padding: 5px;
 }
@@ -34,14 +26,19 @@ export default class Snackbar extends Vue {
   max-width: 25em !important;
 }
 
-.v-snack__wrapper.theme--dark {
-  background-color: red !important;
+.snackbar-text-content {
+  display: flex;
+  word-break: break-word;
+  white-space: pre-wrap;
+
+  .v-icon {
+    align-self: center;
+  }
 }
 
-.v-snack-content {
+.v-snack__content {
   display: flex;
-  align-items: flex-start !important;
   padding: 8px 8px !important;
-  background-color: grey;
+  background-color: $custom-gray;
 }
 </style>
